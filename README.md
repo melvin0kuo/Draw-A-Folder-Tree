@@ -9,6 +9,44 @@
 - 僅顯示資料夾，不包含檔案
 - 按照字母順序排序資料夾名稱
 
+## 環境配置
+
+### 基本需求
+
+1. 安裝 Python 3.x：
+   - Windows: 從 [Python 官網](https://www.python.org/downloads/) 下載並安裝
+   - macOS: 使用 Homebrew 安裝 `brew install python`
+   - Linux: 大多數發行版已預裝，或使用包管理器安裝 (例如 `sudo apt install python3`)
+
+2. 確認 Tkinter 是否已安裝 (僅 Folder_Tree_UI.py 需要)：
+   - 大多數 Python 安裝包已包含 Tkinter
+   - 驗證方法：開啟 Python 命令列並輸入
+     ```python
+     import tkinter
+     tkinter._test()
+     ```
+   - 如未安裝：
+     - Windows/macOS: 重新安裝 Python 並選擇包含 Tkinter
+     - Linux: `sudo apt-get install python3-tk` (Ubuntu/Debian)
+
+### 虛擬環境 (選擇性)
+
+建議使用虛擬環境以避免依賴衝突：
+
+```bash
+# 建立虛擬環境
+python -m venv folder_tree_env
+
+# 啟動虛擬環境
+# Windows
+folder_tree_env\Scripts\activate
+# macOS/Linux
+source folder_tree_env/bin/activate
+
+# 退出虛擬環境
+deactivate
+```
+
 ## 檔案說明
 
 ### 1. Folder_Tree.py
@@ -67,6 +105,17 @@ D:\Projects
 1. 確保已安裝 Python 3.x
 2. 下載專案中的三個 Python 檔案
 3. 無需額外安裝套件
+
+## 故障排除
+
+- **Error: ModuleNotFoundError: No module named 'tkinter'**
+  - 解決方法：按照上方環境配置安裝 Tkinter
+
+- **Error: Permission denied**
+  - 解決方法：確保您有足夠權限訪問指定的資料夾
+
+- **顯示亂碼**
+  - 解決方法：確認終端機使用 UTF-8 編碼
 
 ## 使用建議
 
